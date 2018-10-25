@@ -13,20 +13,27 @@ namespace Items
         public string ItemName { get; set; }
         public double Price { get; set; }
 
+        public Item()
+        {
+
+        }
+
         public Item(int itemid, string itemname, double price) // Konstruktor - Bližnica ctor + 2xTAB
         {
 
             ItemID = itemid;
             ItemName = itemname;
             Price = price;
-            
+
         }
 
         public override string ToString() // neka metoda //overide- pozabi na tostring ki ga je dobil od Object-a
         {
             string stringToReturn;
-            stringToReturn = ItemID + " " + ItemName+" "+Price;
+            stringToReturn = ItemID + " " + ItemName + " " + Price;
             return stringToReturn;
         }
     }
+
+    
 }
