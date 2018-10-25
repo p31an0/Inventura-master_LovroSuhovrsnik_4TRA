@@ -11,7 +11,10 @@ namespace Items
         public string LicenceKey { get; set; }
         public int SizeInMB { get; set; }
 
-        public SoftwareItem() { }
+        public SoftwareItem()
+        {
+
+        }
 
         public SoftwareItem(int itemID, string itemName, double price, string licenceKey, int sizeInMB) : base (itemID, itemName, price)
         {

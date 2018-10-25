@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Items
 {
-    class HardwareItem:Item
+    public class HardwareItem:Item
     {
         public int Weight { get; set; }
 
-        public HardwareItem() { }
+        public HardwareItem()
+        {
+
+        }
 
         public HardwareItem(int itemID, string itemName, double price, int weight) : base(itemID, itemName, price)
         {
