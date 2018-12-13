@@ -16,5 +16,21 @@ namespace Inventura
         {
             InitializeComponent();
         }
+
+        private void IzpisButton_Inventura_Click(object sender, EventArgs e)
+        {
+            Izpis izpis = new Izpis();
+            izpis.Show();
+        }
+
+        private void DodajButton_Inventura_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SpremeniButton_inventura_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
