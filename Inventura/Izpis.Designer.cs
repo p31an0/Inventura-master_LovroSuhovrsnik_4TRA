@@ -33,15 +33,15 @@
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kategorija_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ItemIDtextBox = new System.Windows.Forms.TextBox();
+            this.ItemNametextBox = new System.Windows.Forms.TextBox();
+            this.PricetextBox = new System.Windows.Forms.TextBox();
+            this.KategorijaTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.UpdateIzpis_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(444, 426);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // ItemID
             // 
@@ -79,33 +80,33 @@
             this.kategorija_id.HeaderText = "kategorija_id";
             this.kategorija_id.Name = "kategorija_id";
             // 
-            // textBox1
+            // ItemIDtextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(556, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 1;
+            this.ItemIDtextBox.Location = new System.Drawing.Point(556, 58);
+            this.ItemIDtextBox.Name = "ItemIDtextBox";
+            this.ItemIDtextBox.Size = new System.Drawing.Size(170, 20);
+            this.ItemIDtextBox.TabIndex = 1;
             // 
-            // textBox2
+            // ItemNametextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(556, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 20);
-            this.textBox2.TabIndex = 1;
+            this.ItemNametextBox.Location = new System.Drawing.Point(556, 84);
+            this.ItemNametextBox.Name = "ItemNametextBox";
+            this.ItemNametextBox.Size = new System.Drawing.Size(170, 20);
+            this.ItemNametextBox.TabIndex = 1;
             // 
-            // textBox3
+            // PricetextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(556, 110);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 20);
-            this.textBox3.TabIndex = 1;
+            this.PricetextBox.Location = new System.Drawing.Point(556, 110);
+            this.PricetextBox.Name = "PricetextBox";
+            this.PricetextBox.Size = new System.Drawing.Size(170, 20);
+            this.PricetextBox.TabIndex = 1;
             // 
-            // textBox4
+            // KategorijaTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(556, 136);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(170, 20);
-            this.textBox4.TabIndex = 1;
+            this.KategorijaTextBox.Location = new System.Drawing.Point(556, 136);
+            this.KategorijaTextBox.Name = "KategorijaTextBox";
+            this.KategorijaTextBox.Size = new System.Drawing.Size(170, 20);
+            this.KategorijaTextBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -143,29 +144,30 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Kategorija_id";
             // 
-            // button1
+            // UpdateIzpis_button
             // 
-            this.button1.Location = new System.Drawing.Point(556, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UpdateIzpis_button.Location = new System.Drawing.Point(556, 162);
+            this.UpdateIzpis_button.Name = "UpdateIzpis_button";
+            this.UpdateIzpis_button.Size = new System.Drawing.Size(75, 23);
+            this.UpdateIzpis_button.TabIndex = 4;
+            this.UpdateIzpis_button.Text = "Posodobi";
+            this.UpdateIzpis_button.UseVisualStyleBackColor = true;
+            this.UpdateIzpis_button.Click += new System.EventHandler(this.UpdateIzpis_button_Click);
             // 
             // Izpis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.UpdateIzpis_button);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.KategorijaTextBox);
+            this.Controls.Add(this.PricetextBox);
+            this.Controls.Add(this.ItemNametextBox);
+            this.Controls.Add(this.ItemIDtextBox);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Izpis";
             this.Text = "Izpis";
@@ -183,14 +185,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn kategorija_id;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ItemIDtextBox;
+        private System.Windows.Forms.TextBox ItemNametextBox;
+        private System.Windows.Forms.TextBox PricetextBox;
+        private System.Windows.Forms.TextBox KategorijaTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button UpdateIzpis_button;
     }
 }

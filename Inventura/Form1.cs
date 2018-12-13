@@ -50,7 +50,7 @@ namespace Inventura
         {
             try
             {
-                if (PricetextBox.Text.Contains(".") == true)
+                if (PricetextBox.Text.Contains(".") == true )
                 {
 
                     int itemID;
