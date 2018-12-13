@@ -23,7 +23,7 @@ namespace Items
         public override string ToString() // neka metoda //overide- pozabi na tostring ki ga je dobil od Object-a
         {
             string stringToReturn;
-            stringToReturn = "Hardware: " + ItemName + ", Cena: " + Convert.ToString(Price) + " € , Teža: "+Weight+" kg";
+            stringToReturn = "Hardware: " + ItemName + ", Cena: " + Convert.ToString(Price) + " € , Teža: "+Convert.ToString(Weight)+" kg";
             return stringToReturn;
         }
     }
