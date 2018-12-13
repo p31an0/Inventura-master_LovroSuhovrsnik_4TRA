@@ -25,6 +25,8 @@ namespace Inventura
             int itemID = Convert.ToInt32(ItemIDtextBox.Text);
             string itemName = ItemNametextBox.Text;
             double price;
+
+
             Double.TryParse(PricetextBox.Text, out price);
 
             Item newItem = new Item(itemID, itemName,price);
@@ -48,20 +50,27 @@ namespace Inventura
         {
             try
             {
-                int itemID;
+                if (PricetextBox.Text.Contains(".") == true)
+                {
 
-                int.TryParse(ItemIDtextBox.Text, out itemID);
+                    int itemID;
 
-                ItemsDatabase db = new ItemsDatabase();
+                    int.TryParse(ItemIDtextBox.Text, out itemID);
 
-                MessageBox.Show(db.ReadItem(itemID).ToString());
+                    ItemsDatabase db = new ItemsDatabase();
+
+                    MessageBox.Show(db.ReadItem(itemID).ToString());
+
+                }
+                else
+                {
+                    MessageBox.Show("Namesto decimalne vejice vnesite piko.");
+                }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Vnesite ID izdelka");
             }
-            
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
@@ -69,17 +78,24 @@ namespace Inventura
             int itemID = Convert.ToInt32(ItemIDtextBox.Text);
             string itemName = ItemNametextBox.Text;
             double price;
-            Double.TryParse(PricetextBox.Text, out price);
 
-            Item updateItem = new Item(itemID, itemName, price);
-
-            ItemsDatabase db = new ItemsDatabase();//klic konstruktorja, ki odpre povezavo z bazo
-
-            if (db.UpdateItem(updateItem) == true)
+            if (PricetextBox.Text.Contains(".")==true)
             {
-                MessageBox.Show("Posodobitev uspešna.");
-            }
+                Double.TryParse(PricetextBox.Text, out price);
 
+                Item updateItem = new Item(itemID, itemName, price);
+
+                ItemsDatabase db = new ItemsDatabase();//klic konstruktorja, ki odpre povezavo z bazo
+
+                if (db.UpdateItem(updateItem) == true)
+                {
+                    MessageBox.Show("Posodobitev uspešna.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Namesto decimalne vejice vnesite piko.");                
+            }                
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)

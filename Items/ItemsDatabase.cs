@@ -47,14 +47,11 @@ namespace Items
                     reader.Read();
 
                     toReturn = new Item(reader.GetInt32(0),reader.GetString(1),reader.GetDouble(2));
-
                 }                               
                 com.Dispose();
                 reader.Close();
-
             }
             return toReturn;
-
         }
 
         //ReadItem(int ID) - vrne en Item
@@ -72,8 +69,6 @@ namespace Items
 
             }
             return true;
-
-
         }
 
         public bool DeleteItem(Item toDelete)
