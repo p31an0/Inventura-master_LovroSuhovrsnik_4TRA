@@ -46,7 +46,7 @@ namespace Items
                 {
                     reader.Read();
 
-                    toReturn = new Item(reader.GetInt32(0),reader.GetString(1),reader.GetInt32(2));
+                    toReturn = new Item(reader.GetInt32(0),reader.GetString(1),reader.GetDouble(2));
 
                 }                               
                 com.Dispose();

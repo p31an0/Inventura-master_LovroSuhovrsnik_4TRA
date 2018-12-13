@@ -46,13 +46,22 @@ namespace Inventura
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int itemID;
+            try
+            {
+                int itemID;
 
-            int.TryParse(ItemIDtextBox.Text, out itemID);
+                int.TryParse(ItemIDtextBox.Text, out itemID);
 
-            ItemsDatabase db = new ItemsDatabase();
+                ItemsDatabase db = new ItemsDatabase();
 
-            MessageBox.Show(db.ReadItem(itemID).ToString());
+                MessageBox.Show(db.ReadItem(itemID).ToString());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Vnesite ID izdelka");
+            }
+            
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
