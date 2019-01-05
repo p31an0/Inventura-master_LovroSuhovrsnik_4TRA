@@ -25,12 +25,15 @@ namespace Inventura
 
         private void DodajButton_Inventura_Click(object sender, EventArgs e)
         {
-
+            Dodaj add = new Dodaj();
+            add.Show();
+            
         }
 
         private void SpremeniButton_inventura_Click(object sender, EventArgs e)
         {
-
+            Spremeni change = new Spremeni();
+            change.Show();
         }
     }
 }

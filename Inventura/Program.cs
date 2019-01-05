@@ -16,7 +16,7 @@ namespace Inventura
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Izpis());
+            Application.Run(new PregledInventure());
         }
     }
 }

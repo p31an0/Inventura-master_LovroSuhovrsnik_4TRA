@@ -87,5 +87,11 @@ namespace Inventura
                 MessageBox.Show("Izbrali ste prazno vrstico.");
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Dodaj add = new Dodaj();
+            add.Show();
+        }
     }
 }

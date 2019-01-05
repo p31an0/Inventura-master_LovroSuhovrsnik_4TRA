@@ -13,6 +13,8 @@ namespace Items
         public string ItemName { get; set; }
         public double Price { get; set; }
 
+        public double Kategorija { get; set; }
+
         public Item()
         {
 

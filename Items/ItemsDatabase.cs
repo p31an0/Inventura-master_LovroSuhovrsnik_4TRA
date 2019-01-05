@@ -23,7 +23,7 @@ namespace Items
             
             using (SQLiteCommand com = new SQLiteCommand(con))
             {
-                com.CommandText = "INSERT INTO Izdelki (ItemID, ItemName, Price) VALUES ('" + itemToSave.ItemID + "', '" + itemToSave.ItemName + "', '" + itemToSave.Price + "')";
+                com.CommandText = "INSERT INTO Izdelki (ItemID, ItemName, Price, kategorija_id) VALUES ('" + itemToSave.ItemID + "', '" + itemToSave.ItemName + "', '" + itemToSave.Price + "','"+itemToSave.Kategorija+"')";
                 com.ExecuteNonQuery();
                 com.Dispose();
             }            
@@ -62,7 +62,7 @@ namespace Items
         {
             using (SQLiteCommand com = new SQLiteCommand(con))
             {
-                com.CommandText = "UPDATE Izdelki SET ItemName ='"+toUpdate.ItemName+"',Price = '"+toUpdate.Price+"' WHERE ItemID = '"+ toUpdate.ItemID + "';";
+                com.CommandText = "UPDATE Izdelki SET ItemName ='"+toUpdate.ItemName+"',Price = '"+toUpdate.Price+"', kategorija_id = '"+toUpdate.Kategorija+"' WHERE ItemID = '"+ toUpdate.ItemID + "';";
                 //com.CommandText = "UPDATE Izdelki SET (ItemName ='CPU',Price =500) WHERE ItemID =1;";
                 com.ExecuteNonQuery();
                 com.Dispose();

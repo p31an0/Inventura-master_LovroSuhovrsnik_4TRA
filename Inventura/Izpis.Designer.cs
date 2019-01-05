@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.UpdateIzpis_button = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,11 +155,24 @@
             this.UpdateIzpis_button.UseVisualStyleBackColor = true;
             this.UpdateIzpis_button.Click += new System.EventHandler(this.UpdateIzpis_button_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Chocolate;
+            this.label5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(601, 413);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(187, 25);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Dodaj nov izelek";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // Izpis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.UpdateIzpis_button);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -194,5 +208,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button UpdateIzpis_button;
+        private System.Windows.Forms.Label label5;
     }
 }
