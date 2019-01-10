@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Items;
+using System.Data.SQLite;
 
 namespace Inventura
 {
@@ -42,5 +43,7 @@ namespace Inventura
                 MessageBox.Show("Vnos uspešen.");
             }
         }
+
+        
     }
 }
