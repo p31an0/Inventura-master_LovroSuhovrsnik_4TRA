@@ -26,19 +26,16 @@ namespace Inventura
             string itemName = ItemNametextBox.Text;
             double price;
 
-
             Double.TryParse(PricetextBox.Text, out price);
 
             Item newItem = new Item(itemID, itemName,price);
 
             ItemsDatabase db = new ItemsDatabase();//klic konstruktorja, ki odpre povezavo z bazo
             
-
             if (db.SaveItem(newItem) == true)
             {
                 MessageBox.Show("Vnos uspešen.");
             }
-
         }
 
         private void ItemIDtextBox_TextChanged(object sender, EventArgs e)
@@ -50,7 +47,7 @@ namespace Inventura
         {
             try
             {
-                if (PricetextBox.Text.Contains(".") == true )
+                if (PricetextBox.Text.Contains(".") == true)
                 {
 
                     int itemID;

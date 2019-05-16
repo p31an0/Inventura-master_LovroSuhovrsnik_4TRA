@@ -54,22 +54,19 @@ namespace Inventura
             string itemName = ItemNametextBox.Text;
             double price;
 
-            
-           
-                Double.TryParse(PricetextBox.Text, out price);
+            Double.TryParse(PricetextBox.Text, out price);
 
-                MessageBox.Show(price.ToString());
+            MessageBox.Show(price.ToString());
 
-                Item updateItem = new Item(itemID, itemName, price);
+            Item updateItem = new Item(itemID, itemName, price);
 
-                ItemsDatabase db = new ItemsDatabase();//klic konstruktorja, ki odpre povezavo z bazo
+            ItemsDatabase db = new ItemsDatabase();//klic konstruktorja, ki odpre povezavo z bazo
 
-                if (db.UpdateItem(updateItem) == true)
-                {
-                    MessageBox.Show("Posodobitev uspešna.");
-                    Display();
-                }
-           
+            if (db.UpdateItem(updateItem) == true)
+            {
+                MessageBox.Show("Posodobitev uspešna.");
+                Display();
+            }
         }
 
         private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
